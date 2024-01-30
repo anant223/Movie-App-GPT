@@ -1,15 +1,8 @@
-import { useEffect, useState } from "react";
 
 const VideoTitle = ({vol, muteUmuteBtn, title, overview }) => {  
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+ 
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-  }, []);
+ 
 
 
   return (
@@ -23,16 +16,10 @@ const VideoTitle = ({vol, muteUmuteBtn, title, overview }) => {
       <div className="relative top-10">
         <div className=" flex flex-row  justify-between mx-4 md:mx-0  text-[1.5vw] md:text-[2vw] gap-4">
           <div className="flex gap-4">
-            <button
-              className=" bg-white w-10 h-5"
-            >
+            <button className=" bg-white text-black py-1 px-2 md:py-2 md:px-4 rounded text-lg">
               ▷ Play
             </button>
-            <button
-              style={{ color: "gray", borderColor: "gray" }}
-              variant="outlined"
-              size={windowWidth > 1024 ? "large" : "small"}
-            >
+            <button className="  bg-transparent text-gray-500 py-1 px-2 md:py-2 md:px-4 border rounded text-lg">
               ⓘ More Info
             </button>
           </div>
