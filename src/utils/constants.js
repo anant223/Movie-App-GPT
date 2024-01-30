@@ -5,8 +5,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTJiMmEzMTk4Mjg0MzQyODBhYmU0ZWEzNjQ5ZGQyNCIsInN1YiI6IjY1NWViMzkyYjI2ODFmMDEzOGJhYzk2NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iVV5wIt7VeacA63D4IrUjBb6-jU3-heopk1hfLVu9O0",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -39,7 +38,7 @@ export function Logo() {
     </svg>
   );
 }
-export const OPEN_AI_KEY = "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";
+export const OPEN_AI_KEY = process.env.REACT_APP_OPEN_AI_KEY;
 
 export const initialState = {
   isPlaying: false,
